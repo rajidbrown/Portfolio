@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shaded Motorworks — Project Case Study</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0f0f0f;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    h1, h2 {
+      margin-top: 2.5rem;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      max-width: 700px;
+      color: #cfcfcf;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #1f1f1f;
+      border: 1px solid #333;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+    }
+
+    video {
+      display: block;
+      max-width: 100%;
+      margin: 1rem 0 0.5rem 0;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    }
+
+    small {
+      display: block;
+      color: #888;
+      margin-bottom: 2.5rem;
+    }
+
+    .links {
+      margin-top: 3rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
+      border: none;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #f59e0b;
+      color: #000;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #f5f5f5;
+      border: 1px solid #444;
+    }
+
+    .back {
+      margin-bottom: 2rem;
+      display: inline-block;
+      color: #aaa;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <a href="../projects.html" class="back">← Back to Projects</a>
+
+    <h1>Shaded Motorworks</h1>
+    <p>
+      Shaded Motorworks is a full-stack web application I built to model how a real motorcycle repair shop operates. Many good shops struggle with disorganized scheduling, scattered service records, and disconnected tools. This project brings those workflows into a single, role-based system built for customers, mechanics, and administrators.
+I designed and implemented the frontend, backend logic, and database structure from the ground up. The app uses Laravel and PHP to manage user authentication with securely hashed passwords, role-based access, scheduling logic, and data updates. HTML and CSS handle the interface layer, while SQLite was used during development to build and iterate on a scratch database, with support for MySQL in a production-style setup.
+    </p>
+
+    <div>
+  <span class="tag">Laravel</span>
+  <span class="tag">PHP</span>
+  <span class="tag">Blade</span>
+  <span class="tag">MySQL</span>
+  <span class="tag">SQLite</span>
+  <span class="tag">MVC Architecture</span>
+  <span class="tag">Authentication</span>
+  <span class="tag">Role-Based Access</span>
+    </div>  
+
+    <h2>Under the Hood</h2>
+<p>
+Shaded Motorworks is built on Laravel’s MVC architecture, separating application logic, data handling, and presentation for maintainability and scalability. Authentication is handled using Laravel’s session-based system with securely hashed passwords, and access throughout the app is governed by role-based permissions for customers, mechanics, and administrators.
+</p>
+
+<p>
+Scheduling is driven by custom availability logic that evaluates mechanic work hours, existing appointments, and service requirements to dynamically generate valid booking time slots. Customers never select a specific mechanic; instead, the system automatically matches appointments based on real availability, mirroring how a real shop allocates labor.
+</p>
+
+<p>
+All service history, diagnostics, and recommendations are maintained in a relational database designed specifically for repair workflows. During development, SQLite allowed rapid iteration on schema and features, while the production structure is compatible with MySQL for real-world deployment. Blade templating helps establish a lightweight frontend layer, keeping my UI logic clean and replicable for later page additions. 
+</p>
+
+    <!-- CUSTOMER FLOW -->
+    <h2>Customer Flow</h2>
+    <p>
+      Customers can book service and manage their bikes in one place. Instead
+      of picking a specific mechanic, the system matches appointments based on
+      availability and service type.
+    </p>
+
+    <video src="videos/booking.mp4" autoplay muted loop playsinline></video>
+    <small>Booking an appointment</small>
+
+    <!-- MECHANIC FLOW -->
+    <h2>Mechanic Flow</h2>
+    <p>
+      Mechanics see only the jobs assigned to them, log diagnostics, and submit
+      recommendations directly into the system. That data is saved to the
+      database and immediately reflected on the customer side, creating a clean
+      workflow from inspection to completion.
+    </p>
+
+    <video src="videos/diag.mp4" autoplay muted loop playsinline></video>
+    <small>Logging diagnostics and completing service</small>
+
+    <!-- ADMIN FLOW -->
+    <h2>Administrator Access</h2>
+    <p>
+      Admins manage mechanics, schedules, and shop-wide appointments from a
+      single dashboard. The system is built around role-based access so each
+      user only sees what they need, keeping operations organized and secure.
+    </p>
+
+    <video src="videos/admin.mp4" autoplay muted loop playsinline></video>
+    <small>Managing mechanics and schedules</small>
+
+    <div class="links">
+      <a href="https://vimeo.com/yourvideo" class="btn btn-primary">
+        Watch Full Video Demo
+      </a>
+      <a href="https://github.com/yourusername/shaded-motorworks" class="btn btn-secondary">
+        View Code on GitHub
+      </a>
+    </div>
+  </main>
+</body>
+</html>
+
