@@ -104,12 +104,12 @@
 
 <body>
   <main class="container">
-    <a href="../projects.html" class="back">← Back to Projects</a>
+    <a href="../index.html" class="back">← Back to Home</a>
 
     <h1>Shaded Motorworks</h1>
     <p>
-      Shaded Motorworks is a full-stack web application I built to model how a real motorcycle repair shop operates. Many good shops struggle with disorganized scheduling, scattered service records, and disconnected tools. This project brings those workflows into a single, role-based system built for customers, mechanics, and administrators.
-I designed and implemented the frontend, backend logic, and database structure from the ground up. The app uses Laravel and PHP to manage user authentication with securely hashed passwords, role-based access, scheduling logic, and data updates. HTML and CSS handle the interface layer, while SQLite was used during development to build and iterate on a scratch database, with support for MySQL in a production-style setup.
+    Shaded Motorworks is a full-stack web application that models how a real motorcycle repair shop operates. It centralizes scheduling, service records, and customer–mechanic workflows into a single role-based system for customers, mechanics, and administrators.
+I designed and built the frontend, backend logic, and database from the ground up using Laravel and PHP. Authentication, permissions, scheduling, and data updates are handled server-side, while HTML and CSS power the interface. SQLite was used during development for rapid iteration, with a production-ready structure compatible with MySQL.
     </p>
 
     <div>
@@ -122,19 +122,6 @@ I designed and implemented the frontend, backend logic, and database structure f
   <span class="tag">Authentication</span>
   <span class="tag">Role-Based Access</span>
     </div>  
-
-    <h2>Under the Hood</h2>
-<p>
-Shaded Motorworks is built on Laravel’s MVC architecture, separating application logic, data handling, and presentation for maintainability and scalability. Authentication is handled using Laravel’s session-based system with securely hashed passwords, and access throughout the app is governed by role-based permissions for customers, mechanics, and administrators.
-</p>
-
-<p>
-Scheduling is driven by custom availability logic that evaluates mechanic work hours, existing appointments, and service requirements to dynamically generate valid booking time slots. Customers never select a specific mechanic; instead, the system automatically matches appointments based on real availability, mirroring how a real shop allocates labor.
-</p>
-
-<p>
-All service history, diagnostics, and recommendations are maintained in a relational database designed specifically for repair workflows. During development, SQLite allowed rapid iteration on schema and features, while the production structure is compatible with MySQL for real-world deployment. Blade templating helps establish a lightweight frontend layer, keeping my UI logic clean and replicable for later page additions. 
-</p>
 
     <!-- CUSTOMER FLOW -->
     <h2>Customer Flow</h2>
@@ -169,6 +156,19 @@ All service history, diagnostics, and recommendations are maintained in a relati
 
     <video src="videos/admin.mp4" autoplay muted loop playsinline></video>
     <small>Managing mechanics and schedules</small>
+
+    <h2>Under the Hood</h2>
+      <p>
+      Shaded Motorworks is built on Laravel’s MVC architecture, separating logic, data handling, and presentation for maintainability and scalability. Authentication is handled using Laravel’s session-based system with securely hashed passwords, and access throughout the app is governed by role-based permissions for customers, mechanics, and administrators.
+      </p>
+
+      <p>
+      Scheduling is driven by availability logic that evaluates mechanic work hours, existing appointments, and service requirements to dynamically generate valid booking time slots. The system automatically matches appointments based on real availability, eliminating conflicts. 
+      </p>
+
+      <p>
+      All service history, diagnostics, and recommendations are maintained in a relational database designed specifically for repair workflows. During development, SQLite allowed rapid iteration on schema and features, while the production structure is compatible with MySQL for real-world deployment. Blade templating helps establish a lightweight frontend layer, keeping my UI logic clean and replicable for later page additions. 
+      </p>
 
     <div class="links">
       <a href="https://vimeo.com/yourvideo" class="btn btn-primary">
